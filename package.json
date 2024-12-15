@@ -1,0 +1,26 @@
+{
+  "name": "wdio-lit-test-examples",
+  "source": "./src/index.html",
+  "type": "module",
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@wdio/browser-runner": "^9.4.1",
+    "@wdio/cli": "^9.4.1",
+    "@wdio/dot-reporter": "^9.2.14",
+    "@wdio/jasmine-framework": "^9.4.1",
+    "@wdio/local-runner": "^9.4.1",
+    "@wdio/mocha-framework": "^9.2.8",
+    "@wdio/static-server-service": "^9.4.2",
+    "lit": "^3.2.1",
+    "parcel": "^2.13.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "scripts": {
+    "test": "npm run build && npm run test:component && npm run test:e2e",
+    "test:component": "wdio ./wdio.component.conf.ts",
+    "test:e2e": "wdio ./wdio.e2e.conf.ts",
+    "watch": "parcel",
+    "build": "parcel build"
+  }
+}
