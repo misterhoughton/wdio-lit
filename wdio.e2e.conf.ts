@@ -1,3 +1,4 @@
+const webPort = 8080;
 export const config = {
   //
   // ====================
@@ -76,7 +77,7 @@ export const config = {
   // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
   // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
   // gets prepended directly.
-  baseUrl: "http://localhost:8080/",
+  baseUrl: `http://localhost:${webPort}/`,
   //
   // Default timeout for all waitFor* commands.
   waitforTimeout: 10000,
@@ -97,7 +98,7 @@ export const config = {
       "static-server",
       {
         folders: [{ mount: "/", path: "./dist" }],
-        port: 8080,
+        port: webPort,
       },
     ],
   ],

@@ -7,6 +7,7 @@ let bundler = new Parcel({
   defaultTargetOptions: {
     shouldOptimize: true,
     sourceMaps: false,
+    distDir: "dist",
     engines: {
       browsers: ["last 1 Chrome version"],
     },
