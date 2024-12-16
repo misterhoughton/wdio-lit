@@ -110,7 +110,7 @@ describe("E2E Testing Examples", () => {
       await browser.execute((str: string) => {
         window.localStorage.setItem("access_token", str);
       }, mockAccessToken);
-      await authMock.respond({ data: "Successful login!" });
+      await authMock.respond({ data: successMsg });
       await ComponentPage.$btnLogin.click();
       await ComponentPage.$loginMsg.waitUntil(async function () {
         return (await ComponentPage.$loginMsg.getText()) !== "";
