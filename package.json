@@ -21,6 +21,7 @@
     "test:component": "wdio ./wdio.component.conf.ts",
     "test:e2e": "wdio ./wdio.e2e.conf.ts",
     "watch": "parcel",
-    "build": "parcel build"
+    "build": "node ./build.mjs",
+    "serve": "parcel"
   }
 }
