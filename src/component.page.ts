@@ -23,6 +23,22 @@ class ComponentPage {
   get $btnEmitEvent() {
     return $("#btn_emitEvent");
   }
+
+  get $btnGetToken() {
+    return $("#btn_getToken");
+  }
+
+  get $tokenVal() {
+    return $("#p_token");
+  }
+
+  get $btnLogin() {
+    return $("#btn_login");
+  }
+
+  get $loginMsg() {
+    return $("#p_loginMsg");
+  }
 }
 
 export default new ComponentPage();
