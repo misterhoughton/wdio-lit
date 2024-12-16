@@ -1,10 +1,10 @@
 # Lit - Example Test Approaches using WDIO
 
-The [Lit](https://lit.dev) library is an excellent way to develop lightweight components that can be used very flexibily. Lit provides some suggestions for frameworks that can be used to test components [here](https://lit.dev/docs/tools/testing/).
+The [Lit](https://lit.dev) library is an excellent way to develop lightweight web components that can be used very flexibily. Lit provides some suggestions for frameworks that can be used to test components [here](https://lit.dev/docs/tools/testing/).
 
 [WebDriverIO](https://webdriver.io/) provide some good examples how it can be configured to test components built using Lit [here](https://webdriver.io/docs/component-testing/lit).
 
-Testing components in isolation is a really useful approach but in practice, many features of the WebDriverIO API seem unsuitable for this approach, particularly when multiple web components are used together in the same context.
+Testing components in isolation is a really useful but in practice, many features of the WebDriverIO API are unsuited to this approach and preventing component state being polluted by the results of previous tests is very difficult. This is a particular problem when multiple web components are used together in the same context.
 
 I've put together examples of two approaches for testing Lit Components using WebDriverIO:
 
