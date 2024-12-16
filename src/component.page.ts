@@ -20,6 +20,9 @@ class ComponentPage {
   get $apiErrorMsg() {
     return $("#p_errorMsg");
   }
+  get $btnEmitEvent() {
+    return $("#btn_emitEvent");
+  }
 }
 
 export default new ComponentPage();

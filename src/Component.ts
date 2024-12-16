@@ -11,7 +11,7 @@ export class MyElement extends LitElement {
   error = "";
 
   render() {
-    return html`<button id="btn_increment" @click=${this._incrementCount}>
+    return html`<button id="btn_increment" @click=${this.incrementCount}>
         Increment value
       </button>
       <input id="input_text" type="text" />
@@ -20,10 +20,13 @@ export class MyElement extends LitElement {
         Call Endpoint
       </button>
       <p id="p_endpointResult">${this.result}</p>
-      <p id="p_errorMsg">${this.error}</p>`;
+      <p id="p_errorMsg">${this.error}</p>
+      <button id="btn_emitEvent" @click=${this._emitEvent}>
+        Call Endpoint
+      </button>`;
   }
 
-  private _incrementCount() {
+  incrementCount() {
     this.count++;
   }
 
@@ -33,6 +36,14 @@ export class MyElement extends LitElement {
       .then((res) => res.json())
       .then((res) => (this.result = res.data))
       .catch((err) => (this.error = err));
+  }
+
+  private _emitEvent(e: Event) {
+    this.dispatchEvent(
+      new CustomEvent("my-event", {
+        detail: e,
+      })
+    );
   }
 }
 
