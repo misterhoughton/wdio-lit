@@ -17,7 +17,8 @@
     "typescript": "^5.7.2"
   },
   "scripts": {
-    "test": "npm run build && npm run test:component && npm run test:e2e",
+    "test": "npm run build && npm run test:unit && npm run test:component && npm run test:e2e",
+    "test:unit": "mocha",
     "test:component": "wdio ./wdio.component.conf.ts",
     "test:e2e": "wdio ./wdio.e2e.conf.ts",
     "watch": "parcel",
