@@ -8,11 +8,21 @@ Testing components in isolation is important, but in practice many features of t
 
 I've put together examples of two approaches for testing Lit Components using WebDriverIO:
 
+### Unit Testing (`src/service.unit.ts`)
+
+        npm test:unit
+
+Fast and straightforward. Unit tests can be run against services which contain fewer dependencies and which are shared between components. Mocha is included in WDIO already - no need to introduce any other packages.
+
 ### Component Testing (`src/Component.test.ts`)
+
+        npm test:component
 
 Suitable for testing independent components in isolation. This approach uses the WDIO browser runner to build and test components within an isolated scope.
 
 ### E2E Testing (`src/Component.e2e.ts`)
+
+        npm test:e2e
 
 A preferable approach when testing multiple components within a single context. I've found it significantly more straightforward to develop tests using this method as elements (particularly inputs) are easier to target and manipulate and the overall application state can be easily reset using the `browser.refresh()` command.
 
