@@ -6,7 +6,7 @@ One of the frameworks suggested in the Lit documentation is [WebDriverIO](https:
 
 Testing components in isolation is important, but in practice many features of the WebDriverIO API are unsuited to this approach and preventing component state being polluted by the results of previous tests can be difficult. This is a particular problem when multiple web components are used together in the same context.
 
-I've put together examples of two approaches for testing Lit Components using WebDriverIO:
+I've put together some examples of suitable approaches for testing Lit Components using WebDriverIO:
 
 ### Unit Testing (`src/service.unit.ts`)
 
