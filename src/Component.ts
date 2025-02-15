@@ -19,7 +19,7 @@ export class MyElement extends LitElement {
         Increment value
       </button>
       <input id="input_text" type="text" />
-      <p id="p_count">${this.count}</p>
+      <p id="p_count" data-testid="msg_count">${this.count}</p>
       <button id="btn_callEndpoint" @click=${this._callEndpoint}>
         Call Endpoint
       </button>

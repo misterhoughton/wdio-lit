@@ -2,42 +2,47 @@
 // https://webdriver.io/docs/pageobjects#making-a-page-object
 class ComponentPage {
   url = "/";
+
+  get $body() {
+    return $("body");
+  }
+
   get $btnIncrement() {
     return $("#btn_increment");
   }
   get $countMsg() {
-    return $("#p_count");
+    return this.$body.$('p[data-testid="msg_count"]');
   }
   get $inputText() {
-    return $("#input_text");
+    return this.$body.$("#input_text");
   }
   get $btnCallEndpoint() {
-    return $("#btn_callEndpoint");
+    return this.$body.$("#btn_callEndpoint");
   }
   get $apiResultMsg() {
-    return $("#p_endpointResult");
+    return this.$body.$("#p_endpointResult");
   }
   get $apiErrorMsg() {
-    return $("#p_errorMsg");
+    return this.$body.$("#p_errorMsg");
   }
   get $btnEmitEvent() {
-    return $("#btn_emitEvent");
+    return this.$body.$("#btn_emitEvent");
   }
 
   get $btnGetToken() {
-    return $("#btn_getToken");
+    return this.$body.$("#btn_getToken");
   }
 
   get $tokenVal() {
-    return $("#p_token");
+    return this.$body.$("#p_token");
   }
 
   get $btnLogin() {
-    return $("#btn_login");
+    return this.$body.$("#btn_login");
   }
 
   get $loginMsg() {
-    return $("#p_loginMsg");
+    return this.$body.$("#p_loginMsg");
   }
 }
 

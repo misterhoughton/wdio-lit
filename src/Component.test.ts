@@ -34,3 +34,15 @@ describe("Lit component testing", () => {
     await expect(eventSpy).toHaveBeenCalledTimes(2);
   });
 });
+
+describe("More Lit component testing", () => {
+  before(() => {
+    render(html`<input id="input_text" />`, document.body);
+  });
+
+  it("should increment value on click", async () => {
+    const el = await $("my-element");
+    await $("#input_text").setValue("woohooo");
+    expect(el).toExist();
+  });
+});
