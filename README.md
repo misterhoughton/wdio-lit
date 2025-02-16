@@ -20,11 +20,13 @@ Fast and straightforward. Unit tests can be run against services which contain f
 
 Suitable for testing independent components in isolation. This approach uses the WDIO browser runner to build and test components within an isolated scope.
 
+It is possible to render a fresh instance of your component for each test if you follow the pattern used in `component.class.test.ts`. This requires the component to be instantiated using the `new` keyword rather than by rendering the tempate using its HTML tag.
+
 ### E2E Testing (`src/Component.e2e.ts`)
 
         npm run test:e2e
 
-A preferable approach when testing multiple components within a single context. I've found it significantly more straightforward to develop tests using this method as elements (particularly inputs) are easier to target and manipulate and the overall application state can be easily reset using the `browser.refresh()` command.
+A preferable approach when testing multiple components within a single context. I've found it significantly more straightforward to develop tests using this method. Elements (particularly inputs) are easier to target and manipulate and the overall application state can be easily reset using the `browser.refresh()` command.
 
 Testing an application using WDIO in this way requires that the static application code is built before test execution. The static files are then served via the [WDIO Static Server](https://webdriver.io/docs/static-server-service/) service (see `wdio.e2e.conf` for implementation details) and targeted by the tests.
 

@@ -18,7 +18,7 @@ describe("Lit component testing using new element instance in each spec", () => 
     await expect(ComponentPage.$inputText).toHaveValue("hello");
   });
 
-  it("should reset values", async () => {
+  it("should reset values between specs", async () => {
     await expect(ComponentPage.$inputText).toHaveValue("");
     await expect(ComponentPage.$countMsg).toHaveText("0");
   });
